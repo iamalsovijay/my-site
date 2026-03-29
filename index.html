@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enso — Revenue Operating System</title>
+  <meta name="description" content="Enso automates the entire Order-to-Cash lifecycle — from contract to ERP — without replacing your stack. Built by CFOs who ran this at scale.">
+  <link rel="icon" type="image/png" href="../assets/Logos/Enso Fav purple.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============================================================
+     NAV
+     ============================================================ -->
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo">
+      <img src="../assets/Logos/enso-logo-white.webp" alt="Enso">
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#how-it-works">How It Works</a>
+      <a href="#results">Results</a>
+      <a href="#case-studies">Case Studies</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="btn btn-primary">Book a Discovery Call →</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-bg-glow-1"></div>
+    <div class="hero-bg-glow-2"></div>
+    <div class="hero-bg-grid"></div>
+  </div>
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <div class="label fade-up d1">Revenue Operating System</div>
+      <h1 class="fade-up d2">Revenue should close<br>on Day Zero.</h1>
+      <p class="hero-sub fade-up d3">Contract to cash, automated. Without replacing your stack.</p>
+      <div class="hero-actions fade-up d4">
+        <a href="#contact" class="btn btn-primary btn-lg">Book a Discovery Session →</a>
+        <a href="#how-it-works" class="hero-text-link">See how it works ↓</a>
+      </div>
+    </div>
+    <div class="hero-visual fade-up d3">
+      <div class="stat-card">
+        <div class="stat-num">D+0</div>
+        <div class="stat-lbl">Month close with Enso</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">1-click</div>
+        <div class="stat-lbl">Invoice to ERP, fully automated</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">6–8 wks</div>
+        <div class="stat-lbl">From POC to go-live</div>
+      </div>
+    </div>
+  </div>
+  <div class="container trusted-bar fade-up d4">
+    <span class="trusted-lbl">Trusted by</span>
+    <div class="trusted-logos">
+      <img src="../assets/Logos/customers/capillary.webp" alt="Capillary Technologies" class="customer-logo">
+      <img src="../assets/Logos/customers/perfios.svg" alt="Perfios" class="customer-logo">
+      <img src="../assets/Logos/customers/hyperverge-old.webp" alt="Hyperverge" class="customer-logo">
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROBLEM
+     ============================================================ -->
+<section id="problem" class="section-problem">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="label">The Problem</div>
+      <h2>Your O2C process has 5 systems<br>and 0 connections.</h2>
+      <p class="section-sub">Every handoff between contract, usage, billing, ERP, and collections is manual. Every manual step is a risk — leakage, delays, disputes, key-person dependency.</p>
+    </div>
+    <div class="problem-flow reveal">
+      <div class="problem-step">
+        <div class="p-step-icon">📋</div>
+        <div class="p-step-system">CRM</div>
+        <div class="p-step-desc">Contracts &amp; deal terms</div>
+      </div>
+      <div class="problem-step">
+        <div class="p-step-icon">📊</div>
+        <div class="p-step-system">Product DB</div>
+        <div class="p-step-desc">Usage &amp; metering data</div>
+      </div>
+      <div class="problem-step">
+        <div class="p-step-icon">📑</div>
+        <div class="p-step-system">Spreadsheet</div>
+        <div class="p-step-desc">Billing logic &amp; amendments</div>
+      </div>
+      <div class="problem-step">
+        <div class="p-step-icon">🏦</div>
+        <div class="p-step-system">ERP</div>
+        <div class="p-step-desc">Revenue recognition &amp; journals</div>
+      </div>
+      <div class="problem-step">
+        <div class="p-step-icon">📬</div>
+        <div class="p-step-system">Inbox</div>
+        <div class="p-step-desc">Collections &amp; follow-ups</div>
+      </div>
+    </div>
+    <div class="problem-callout reveal">
+      <p>At $10M ARR, this is inconvenient. At $50M ARR, it's a structural problem. At $100M ARR, it's a liability.<br><strong>The fix isn't more headcount. It's a revenue operating layer.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     HOW IT WORKS / SERVICES
+     ============================================================ -->
+<section id="how-it-works" class="section-services">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="label">How It Works</div>
+      <h2>Five modules. One lifecycle.<br>Zero manual handoffs.</h2>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card reveal reveal-delay-1">
+        <div class="svc-num">01</div>
+        <div class="svc-content">
+          <h3>Contract Management</h3>
+          <p>Enso pulls contracts from Salesforce, HubSpot, or DocuSign PDFs. AI parses every commercial term — pricing model, SKUs, billing frequency, tiering, amendments. Codified once. Executed automatically for the full contract term.</p>
+          <div class="svc-replaces">
+            <span class="rep-lbl">Replaces:</span>
+            <span class="rep-text">Manual contract entry, billing spec documents, "check with the sales team" workflows</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2">
+        <div class="svc-num">02</div>
+        <div class="svc-content">
+          <h3>Usage Metering</h3>
+          <p>Every usage signal — API calls, SMS, transactions, seats, campaigns — normalized and aggregated from every source. APIs, CSVs, third-party portals. Multi-entity rollups. Parent-child hierarchies. One accurate number per customer, per period.</p>
+          <div class="svc-replaces">
+            <span class="rep-lbl">Replaces:</span>
+            <span class="rep-text">Vendor portal logins, Excel aggregation, data analyst requests</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card reveal reveal-delay-1">
+        <div class="svc-num">03</div>
+        <div class="svc-content">
+          <h3>Automated Invoicing</h3>
+          <p>One click raises the invoice. Enso generates it, hits the GST portal, affixes the DSC, pushes journal and revenue recognition entries to NetSuite, and emails the customer. Under a second. Configurable approval layers. Bulk actions at scale.</p>
+          <div class="svc-replaces">
+            <span class="rep-lbl">Replaces:</span>
+            <span class="rep-text">500 manual invoices a month, cross-team approvals, late invoice cycles</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2">
+        <div class="svc-num">04</div>
+        <div class="svc-content">
+          <h3>Revenue Recognition</h3>
+          <p>Proportionate, milestone, or immediate — set per SKU, automated per contract. Unbilled revenue tracked at draft stage, auto-reversed on invoicing. Credit notes handled. Every entry deterministic, auditable, explainable.</p>
+          <div class="svc-replaces">
+            <span class="rep-lbl">Replaces:</span>
+            <span class="rep-text">Month-end Excel rev rec workbooks, manual NetSuite entries, unbilled accrual tracking</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="svc-num">05</div>
+        <div class="svc-content">
+          <h3>Collections &amp; DSO Management</h3>
+          <p>Automated reminders that escalate by severity. Aging reports by customer, entity, account manager. DSO tracked in real time. Payment entries sync with NetSuite. Outstanding pushed to Salesforce so AMs see it without logging into finance systems.</p>
+          <div class="svc-replaces">
+            <span class="rep-lbl">Replaces:</span>
+            <span class="rep-text">Collections inboxes, manual follow-up sequences, D+10 AR reporting</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="integrations-wrap reveal">
+      <p class="integrations-eyebrow">Works with your existing stack — not a replacement</p>
+      <div class="integrations-panel">
+        <div class="integrations-panel-label">Full integration ecosystem</div>
+        <img src="../assets/Integrations.jpg" alt="Enso — full Order-to-Cash integration ecosystem" class="integrations-img">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     RESULTS
+     ============================================================ -->
+<section id="results" class="section-results">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="label">Results</div>
+      <h2>What finance teams get back.</h2>
+    </div>
+    <div class="results-table reveal">
+      <div class="results-row results-head">
+        <div class="r-col r-before">Before Enso</div>
+        <div class="r-col r-after">After Enso</div>
+      </div>
+      <div class="results-row">
+        <div class="r-col r-before">Month close: D+7 to D+10</div>
+        <div class="r-col r-after">Month close: D+0 to D+2</div>
+      </div>
+      <div class="results-row">
+        <div class="r-col r-before">Invoice creation: manual, error-prone</div>
+        <div class="r-col r-after">Invoice creation: automated, one-click</div>
+      </div>
+      <div class="results-row">
+        <div class="r-col r-before">Revenue recognition: Excel + ERP entries</div>
+        <div class="r-col r-after">Revenue recognition: codified, deterministic</div>
+      </div>
+      <div class="results-row">
+        <div class="r-col r-before">Collections: inbox-based, reactive</div>
+        <div class="r-col r-after">Collections: system-driven, severity-escalating</div>
+      </div>
+      <div class="results-row">
+        <div class="r-col r-before">Billing logic: in people's heads</div>
+        <div class="r-col r-after">Billing logic: in the system, auditable</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CASE STUDIES
+     ============================================================ -->
+<section id="case-studies" class="section-cases">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="label">Case Studies</div>
+      <h2>Live at companies running<br>real complexity.</h2>
+    </div>
+    <div class="cases-grid">
+
+      <div class="case-card reveal reveal-delay-1">
+        <div class="case-logo-row">
+          <img src="../assets/Logos/customers/capillary.webp" alt="Capillary Technologies" class="case-logo">
+        </div>
+        <div class="case-co">Capillary Technologies</div>
+        <div class="case-tags">
+          <span class="tag">Global Retail SaaS</span>
+          <span class="tag">Multi-region</span>
+          <span class="tag">Usage-based billing</span>
+        </div>
+        <div class="case-block">
+          <div class="case-block-lbl">Problem</div>
+          <p>Contracts across 5 continents. Usage billing spanning SMS, WhatsApp, transactions, physical goods. Revenue logic held together by a small team and a lot of Excel. Month-close dependent on 3 people who couldn't go on leave simultaneously.</p>
+        </div>
+        <div class="case-block">
+          <div class="case-block-lbl">Enso</div>
+          <p>Connected directly to Databricks. Codified every contract into executable billing logic. Replaced manual NetSuite entry with structured, deterministic output.</p>
+        </div>
+        <div class="case-outcome">
+          <strong>Month-close moved from D+8 to D+2.</strong> A finance team that previously couldn't take leave simultaneously now runs the close without key-person dependency. Thousands of ERP entries that required manual validation now post deterministically.
+        </div>
+      </div>
+
+      <div class="case-card reveal reveal-delay-2">
+        <div class="case-logo-row">
+          <img src="../assets/Logos/customers/perfios.svg" alt="Perfios" class="case-logo">
+        </div>
+        <div class="case-co">Perfios</div>
+        <div class="case-tags">
+          <span class="tag">B2B TechFin</span>
+          <span class="tag">Acquired entities</span>
+          <span class="tag">Fragmented schemas</span>
+        </div>
+        <div class="case-block">
+          <div class="case-block-lbl">Problem</div>
+          <p>Each acquisition brought its own contracts, billing logic, and data streams. Each team ran its own revenue ops. The central finance team couldn't get a single trusted revenue number across the portfolio.</p>
+        </div>
+        <div class="case-block">
+          <div class="case-block-lbl">Enso</div>
+          <p>Unified the revenue layer across all entities — cleaning, normalizing, and consolidating into one executable billing system across legacy and acquired products.</p>
+        </div>
+        <div class="case-outcome">
+          <strong>Consolidated revenue reporting across all entities — from fragmented to one source of truth.</strong> Billing leakage from untracked usage eliminated. Month-close no longer gated on manual reconciliation across acquired company schemas.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ABOUT
+     ============================================================ -->
+<section id="about" class="section-about">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="label">About</div>
+      <h2>Built by CFOs who ran<br>this at scale.</h2>
+      <p class="section-sub">We didn't study this problem. We ran it — at MPL, Capillary, InMobi, and Freecharge. Enso is what we wish we had then.</p>
+    </div>
+    <div class="build-objection reveal">
+      <div class="bo-label">On building it in-house</div>
+      <p class="bo-text">Every tech company CFO asks this. Here's the honest answer: a custom O2C integration takes 12–18 months of engineering time, costs ₹50–75 lakhs to build, and still requires ongoing maintenance. We've already solved the edge cases — multi-entity hierarchies, amendment logic, usage normalization across schemas — at Capillary, Perfios, and Hyperverge. You benefit from that work on day one.</p>
+    </div>
+    <div class="founders-grid">
+
+      <div class="founder-card reveal reveal-delay-1">
+        <div class="founder-name">Vijay AM</div>
+        <div class="founder-role">Co-Founder</div>
+        <div class="founder-creds">
+          <div class="cred">CFO, MPL — hyper-growth, millions of daily transactions, real-time revenue</div>
+          <div class="cred">CFO, Capillary Technologies — global, multi-entity, usage-based at scale</div>
+          <div class="cred">2× Founder</div>
+        </div>
+        <p class="founder-bio">I started Enso because finance teams are getting left behind — buried in data they can't use, in systems that weren't built for how business moves today. The goal isn't software adoption. The goal is finance teams that move at the speed of the business.</p>
+      </div>
+
+      <div class="founder-card reveal reveal-delay-2">
+        <div class="founder-name">Sharat Khurana</div>
+        <div class="founder-role">Co-Founder</div>
+        <div class="founder-creds">
+          <div class="cred">CFO, InMobi</div>
+          <div class="cred">CFO, Freecharge</div>
+          <div class="cred">Founder, ZenEquity — acquired by Carta</div>
+        </div>
+        <p class="founder-bio">Revenue is the lifeblood of any business. Turning it into cash as efficiently as possible is the most critical work a finance team does. We saw these processes remain fragmented even at scale — and built the fix.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHAT ACTUALLY HAPPENED
+     ============================================================ -->
+<section id="testimonials" class="section-testimonials">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="label">What Actually Happened</div>
+      <h2>Not a promise.<br>A record.</h2>
+    </div>
+    <div class="outcome-story reveal">
+      <div class="outcome-co">Capillary Technologies — Global Retail SaaS, 5 continents</div>
+      <div class="outcome-timeline">
+        <div class="ot-step">
+          <div class="ot-marker ot-before">Before</div>
+          <div class="ot-content">
+            <p>Month-close took D+8. Three people owned the billing process and couldn't go on leave simultaneously. Usage data across SMS, WhatsApp, transactions, and physical goods reconciled manually against contracts in spreadsheets. Every ERP entry validated by hand.</p>
+          </div>
+        </div>
+        <div class="ot-step">
+          <div class="ot-marker ot-after">After Enso</div>
+          <div class="ot-content">
+            <p>Month-close runs at D+2 — a 6-day reduction on a 30-person finance team. Billing logic codified once; executed automatically every cycle. Thousands of ERP entries that required manual validation now post deterministically. The team runs the close without key-person dependency.</p>
+          </div>
+        </div>
+      </div>
+      <div class="outcome-stat-row">
+        <div class="outcome-stat">
+          <div class="os-num">D+8 → D+2</div>
+          <div class="os-lbl">Month-close timeline</div>
+        </div>
+        <div class="outcome-stat">
+          <div class="os-num">0</div>
+          <div class="os-lbl">Key-person dependencies on billing</div>
+        </div>
+        <div class="outcome-stat">
+          <div class="os-num">1-click</div>
+          <div class="os-lbl">Invoice → ERP → GST portal</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CTA
+     ============================================================ -->
+<section id="cta-band" class="section-cta">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <div class="label label-light">Book a Session</div>
+      <h2>If your O2C process is still manual —<br>let's fix that.</h2>
+      <p class="cta-body">Book 30 minutes with Vijay and Sharat. Bring your most complex contract. Bring your messiest data scenario. They'll show you exactly how Enso handles it — live, in the session.</p>
+      <p class="cta-sub">Bottom line: if we can't solve your problem, we'll tell you in that call.</p>
+      <a href="#contact" class="btn btn-white btn-lg">Book a Discovery Session →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT
+     ============================================================ -->
+<section id="contact" class="section-contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="label">Get In Touch</div>
+        <h2>One finance leader<br>to another.</h2>
+        <p>This isn't a product demo. It's a direct conversation about your revenue process — where it breaks, what it costs you, and whether Enso is the right fit.</p>
+        <div class="contact-meta">
+          <div class="contact-line">
+            <span class="c-icon">✉</span>
+            <span>hello@getenso.ai</span>
+          </div>
+          <div class="contact-line">
+            <span class="c-icon">⊙</span>
+            <span>getenso.ai</span>
+          </div>
+          <div class="contact-line">
+            <span class="c-icon">◎</span>
+            <span>Bangalore, India — Serving B2B SaaS globally</span>
+          </div>
+        </div>
+        <div class="pricing-signal">
+          <div class="pricing-signal-label">Pricing</div>
+          <p>Module-based — scales with entities and data volume. Most customers at 200–500 billing entities pay ₹2–5 lakhs/month depending on modules used. Get an estimate in the discovery call.</p>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <form id="contactForm" class="form-box">
+          <div class="form-row">
+            <div class="fg">
+              <label for="fname">Name</label>
+              <input type="text" id="fname" name="name" placeholder="Your name" required>
+            </div>
+            <div class="fg">
+              <label for="fcompany">Company</label>
+              <input type="text" id="fcompany" name="company" placeholder="Company name" required>
+            </div>
+          </div>
+          <div class="fg">
+            <label for="femail">Work Email</label>
+            <input type="email" id="femail" name="email" placeholder="you@company.com" required>
+          </div>
+          <div class="fg">
+            <label for="fchallenge">Biggest challenge in your O2C process</label>
+            <textarea id="fchallenge" name="challenge" rows="4" placeholder="Tell us what's broken — billing complexity, ERP sync, month-close delays..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full btn-lg">Book a Discovery Session →</button>
+          <p class="form-note">No sales team in between. A direct 30-min call with the founders.</p>
+        </form>
+        <div id="formSuccess" class="form-success" style="display:none;">
+          <div class="success-ring">✓</div>
+          <h3>We'll be in touch.</h3>
+          <p>Expect a message from Vijay or Sharat within 24 hours.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-logo">
+      <img src="../assets/Logos/enso-logo-white.webp" alt="Enso">
+    </div>
+    <div class="footer-mid">
+      <p>Revenue Operating System for modern pricing</p>
+      <p class="footer-small">© 2026 Enso &nbsp;·&nbsp; getenso.ai &nbsp;·&nbsp; hello@getenso.ai &nbsp;·&nbsp; Bangalore, India</p>
+    </div>
+    <div>
+      <div class="security-note">
+        <span class="cert-badge">Data Security</span>
+        <p class="security-detail">Your data stays yours. NetSuite and Salesforce access is read/write scoped to billing data only. Enterprise security documentation available on request — hello@getenso.ai</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     CHAT LAUNCHERS
+     ============================================================ -->
+<div id="chat-launchers">
+  <button id="proposal-launch-btn" class="launch-btn launch-btn-secondary" aria-label="Get a proposal">
+    <span class="launch-btn-icon">✦</span>
+    <span class="launch-btn-label">Get Proposal</span>
+  </button>
+  <button id="qa-launch-btn" class="launch-btn launch-btn-primary" aria-label="Ask us anything">
+    <span class="launch-btn-icon">
+      <img src="../assets/Logos/Enso Fav white.png" alt="" width="16" height="16" style="object-fit:contain;">
+    </span>
+    <span class="launch-btn-label">Ask me anything</span>
+  </button>
+</div>
+
+<!-- ============================================================
+     WIDGET 1 — Q&A Chat
+     ============================================================ -->
+<div id="qa-widget" class="chat-widget" role="dialog" aria-label="Enso Q&A chat">
+  <div class="widget-head">
+    <div class="chat-av">
+      <img src="../assets/Logos/Enso Fav white.png" alt="Enso" width="22" height="22">
+    </div>
+    <div class="widget-head-text">
+      <div class="chat-head-name">Enso</div>
+      <div class="chat-head-status">Online — ask us anything</div>
+    </div>
+    <button class="widget-close-btn" id="qaCloseBtn" aria-label="Close chat">✕</button>
+  </div>
+  <div id="qaMsgs" class="chat-msgs"></div>
+  <div class="chat-input-row">
+    <input type="text" id="qaInput" placeholder="Ask me anything..." autocomplete="off" maxlength="500">
+    <button id="qaSend" class="chat-send-btn" aria-label="Send message">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="22" y1="2" x2="11" y2="13"></line>
+        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<!-- ============================================================
+     WIDGET 2 — Proposal Intake
+     ============================================================ -->
+<div id="proposal-widget" class="chat-widget proposal-widget" role="dialog" aria-label="Get a proposal">
+  <div class="widget-head proposal-head">
+    <div class="chat-av proposal-av">
+      <img src="../assets/Logos/Enso Fav white.png" alt="Enso" width="22" height="22">
+    </div>
+    <div class="widget-head-text">
+      <div class="chat-head-name">Get a Proposal</div>
+      <div class="chat-head-status">Tailored to your setup</div>
+    </div>
+    <button class="widget-close-btn" id="proposalCloseBtn" aria-label="Close">✕</button>
+  </div>
+  <div class="proposal-progress">
+    <div class="progress-bar-track">
+      <div class="progress-bar-fill" id="proposalProgressFill"></div>
+    </div>
+    <div class="progress-label" id="proposalProgressLabel">Step 1 of 6</div>
+  </div>
+  <div id="proposalMsgs" class="chat-msgs"></div>
+  <div class="chat-input-row" id="proposalInputRow">
+    <input type="text" id="proposalInput" placeholder="Type your answer..." autocomplete="off" maxlength="500">
+    <button id="proposalSend" class="chat-send-btn" aria-label="Send">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="22" y1="2" x2="11" y2="13"></line>
+        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
+<script>
+/* ---- NAV scroll behaviour ---- */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 40);
+}, { passive: true });
+
+/* ---- Mobile nav toggle ---- */
+const navToggle = document.getElementById('navToggle');
+const navLinks  = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => {
+  const open = navLinks.classList.toggle('mobile-open');
+  navToggle.classList.toggle('active', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+navLinks.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    navLinks.classList.remove('mobile-open');
+    navToggle.classList.remove('active');
+    document.body.style.overflow = '';
+  });
+});
+
+/* ---- Scroll reveal ---- */
+const revealEls = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+revealEls.forEach(el => revealObserver.observe(el));
+
+/* ---- Contact form ---- */
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('button[type="submit"]');
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+  setTimeout(() => {
+    document.getElementById('contactForm').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  }, 900);
+});
+
+/* ---- Widget helpers ---- */
+function makeBubble(text, isUser, msgsEl) {
+  const b = document.createElement('div');
+  b.className = 'chat-bubble' + (isUser ? ' chat-bubble-user' : '');
+  b.textContent = text;
+  msgsEl.appendChild(b);
+  msgsEl.scrollTop = msgsEl.scrollHeight;
+  return b;
+}
+
+function makeTypingIndicator(msgsEl, id) {
+  const b = document.createElement('div');
+  b.className = 'chat-bubble typing';
+  b.id = id;
+  b.innerHTML = '<div class="typing-dots"><span></span><span></span><span></span></div>';
+  msgsEl.appendChild(b);
+  msgsEl.scrollTop = msgsEl.scrollHeight;
+}
+
+function removeTypingById(id) {
+  const el = document.getElementById(id);
+  if (el) el.remove();
+}
+
+async function callChat(messages) {
+  const res = await fetch('/api/chat', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ messages }),
+  });
+  if (!res.ok) throw new Error('API error ' + res.status);
+  return res.json();
+}
+
+/* ---- Launcher logic ---- */
+const launchers        = document.getElementById('chat-launchers');
+const qaWidget         = document.getElementById('qa-widget');
+const proposalWidget   = document.getElementById('proposal-widget');
+const qaLaunchBtn      = document.getElementById('qa-launch-btn');
+const proposalLaunchBtn = document.getElementById('proposal-launch-btn');
+const qaCloseBtn       = document.getElementById('qaCloseBtn');
+const proposalCloseBtn = document.getElementById('proposalCloseBtn');
+
+function openWidget(widget) {
+  launchers.classList.add('hidden');
+  widget.classList.add('open');
+}
+
+function closeWidget(widget) {
+  widget.classList.remove('open');
+  launchers.classList.remove('hidden');
+}
+
+qaLaunchBtn.addEventListener('click', () => {
+  openWidget(qaWidget);
+  if (qaHistory.length === 0) setTimeout(qaWelcome, 320);
+  setTimeout(() => document.getElementById('qaInput').focus(), 360);
+});
+
+proposalLaunchBtn.addEventListener('click', () => {
+  openWidget(proposalWidget);
+  if (proposalHistory.length === 0) setTimeout(proposalStart, 320);
+  else setTimeout(() => document.getElementById('proposalInput').focus(), 360);
+});
+
+qaCloseBtn.addEventListener('click', () => closeWidget(qaWidget));
+proposalCloseBtn.addEventListener('click', () => closeWidget(proposalWidget));
+
+/* ======================================================
+   WIDGET 1 — Q&A Chat
+   ====================================================== */
+const qaMsgs  = document.getElementById('qaMsgs');
+const qaInput = document.getElementById('qaInput');
+const qaSend  = document.getElementById('qaSend');
+let qaHistory = [];
+let qaTyping  = false;
+
+function qaWelcome() {
+  makeTypingIndicator(qaMsgs, 'qaTyping');
+  setTimeout(() => {
+    removeTypingById('qaTyping');
+    makeBubble("Hi. Ask me anything about Enso — what we do, who we work with, how implementation works, or whether we're the right fit for your setup.", false, qaMsgs);
+  }, 820);
+}
+
+async function qaSendMessage() {
+  const text = qaInput.value.trim();
+  if (!text || qaTyping) return;
+
+  qaInput.value = '';
+  qaInput.disabled = true;
+  qaSend.disabled = true;
+  qaTyping = true;
+
+  makeBubble(text, true, qaMsgs);
+  qaHistory.push({ role: 'user', content: text });
+  makeTypingIndicator(qaMsgs, 'qaTyping');
+
+  try {
+    const data = await callChat(qaHistory);
+    removeTypingById('qaTyping');
+    const reply = data.reply || "Something went wrong on my end. Reach out directly — hello@getenso.ai.";
+    qaHistory.push({ role: 'assistant', content: reply });
+    makeBubble(reply, false, qaMsgs);
+  } catch (err) {
+    removeTypingById('qaTyping');
+    makeBubble("Something went wrong on my end. Reach out directly — hello@getenso.ai.", false, qaMsgs);
+  } finally {
+    qaTyping = false;
+    qaInput.disabled = false;
+    qaSend.disabled = false;
+    qaInput.focus();
+  }
+}
+
+qaSend.addEventListener('click', qaSendMessage);
+qaInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); qaSendMessage(); }
+});
+
+/* ======================================================
+   WIDGET 2 — Proposal Intake
+   ====================================================== */
+const proposalMsgs       = document.getElementById('proposalMsgs');
+const proposalInput      = document.getElementById('proposalInput');
+const proposalSend       = document.getElementById('proposalSend');
+const proposalFill       = document.getElementById('proposalProgressFill');
+const proposalLabel      = document.getElementById('proposalProgressLabel');
+const proposalInputRow   = document.getElementById('proposalInputRow');
+let proposalHistory      = [];
+let proposalTyping       = false;
+let proposalDone         = false;
+
+function setProposalProgress(step) {
+  proposalFill.style.width = Math.round((step / 6) * 100) + '%';
+  proposalLabel.textContent = 'Step ' + step + ' of 6';
+}
+
+async function proposalStart() {
+  proposalHistory = [{ role: 'user', content: "I'd like to get a proposal." }];
+  makeTypingIndicator(proposalMsgs, 'proposalTyping');
+  proposalInput.disabled = true;
+  proposalSend.disabled = true;
+  proposalTyping = true;
+
+  try {
+    const data = await callChat(proposalHistory);
+    removeTypingById('proposalTyping');
+    const reply = data.reply || "Let's put together a proposal. What does your company do?";
+    proposalHistory.push({ role: 'assistant', content: reply });
+    makeBubble(reply, false, proposalMsgs);
+    if (data.intake_step) setProposalProgress(data.intake_step);
+  } catch (err) {
+    removeTypingById('proposalTyping');
+    makeBubble("Something went wrong. Reach out directly — hello@getenso.ai.", false, proposalMsgs);
+  } finally {
+    proposalTyping = false;
+    proposalInput.disabled = false;
+    proposalSend.disabled = false;
+    proposalInput.focus();
+  }
+}
+
+async function proposalSendMessage() {
+  const text = proposalInput.value.trim();
+  if (!text || proposalTyping || proposalDone) return;
+
+  proposalInput.value = '';
+  proposalInput.disabled = true;
+  proposalSend.disabled = true;
+  proposalTyping = true;
+
+  makeBubble(text, true, proposalMsgs);
+  proposalHistory.push({ role: 'user', content: text });
+  makeTypingIndicator(proposalMsgs, 'proposalTyping');
+
+  try {
+    const data = await callChat(proposalHistory);
+    removeTypingById('proposalTyping');
+    const reply = data.reply || "Something went wrong. Reach out directly — hello@getenso.ai.";
+    proposalHistory.push({ role: 'assistant', content: reply });
+    makeBubble(reply, false, proposalMsgs);
+
+    if (data.intake_step) setProposalProgress(data.intake_step);
+
+    if (data.intake_complete) {
+      proposalDone = true;
+      proposalFill.style.width = '100%';
+      proposalLabel.textContent = 'Complete';
+      proposalInputRow.style.display = 'none';
+      // Fire and forget — notify the backend
+      fetch('/api/generate-proposal', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ intakeData: data.intake_data, conversation: proposalHistory }),
+      }).catch(() => {});
+      return;
+    }
+  } catch (err) {
+    removeTypingById('proposalTyping');
+    makeBubble("Something went wrong. Reach out directly — hello@getenso.ai.", false, proposalMsgs);
+  } finally {
+    if (!proposalDone) {
+      proposalTyping = false;
+      proposalInput.disabled = false;
+      proposalSend.disabled = false;
+      proposalInput.focus();
+    }
+  }
+}
+
+proposalSend.addEventListener('click', proposalSendMessage);
+proposalInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); proposalSendMessage(); }
+});
+</script>
+
+</body>
+</html>

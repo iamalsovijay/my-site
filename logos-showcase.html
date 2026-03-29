@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enso — Logo Showcase</title>
+  <style>
+    @font-face {
+      font-family: 'Onest';
+      src: url('../assets/Fonts/Onest/Onest-VariableFont_wght.ttf') format('truetype');
+      font-weight: 100 900;
+      font-display: block;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Onest', -apple-system, sans-serif;
+      background: #0C0C14;
+      color: #E8E6F2;
+      min-height: 100vh;
+      padding: 48px 32px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ---- Page header ---- */
+    .page-header {
+      max-width: 960px;
+      margin: 0 auto 60px;
+    }
+    .page-header h1 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 6px;
+    }
+    .page-header p {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.25);
+      line-height: 1.6;
+    }
+
+    /* ---- Logo section ---- */
+    .logo-section {
+      max-width: 960px;
+      margin: 0 auto 80px;
+    }
+    .logo-section-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #7879F1;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(255,255,255,0.07);
+    }
+
+    /* ---- Panel grid ---- */
+    .panels {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    /* ---- Individual panel ---- */
+    .panel {
+      border-radius: 14px;
+      padding: 56px 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+    .panel-label {
+      position: absolute;
+      top: 16px;
+      left: 20px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.4;
+    }
+    .panel-logo {
+      display: flex;
+      align-items: center;
+    }
+
+    /* Dark background panels */
+    .panel-dark {
+      background: #09090F;
+      border: 1px solid rgba(255,255,255,0.07);
+    }
+    .panel-dark .panel-label { color: #FFFFFF; }
+
+    /* Slightly lighter dark panels */
+    .panel-dark-alt {
+      background: #13141F;
+      border: 1px solid rgba(255,255,255,0.07);
+    }
+    .panel-dark-alt .panel-label { color: #FFFFFF; }
+
+    /* Light background panels */
+    .panel-light {
+      background: #FFFFFF;
+      border: 1px solid rgba(0,0,0,0.08);
+    }
+    .panel-light .panel-label { color: #09090F; }
+
+    /* Off-white panels */
+    .panel-offwhite {
+      background: #F4F2F8;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    .panel-offwhite .panel-label { color: #09090F; }
+
+
+    /* ---- Inline SVG color overrides per background ---- */
+
+    /* On dark backgrounds: white wordmark */
+    .panel-dark    .v1-word,
+    .panel-dark-alt .v1-word,
+    .panel-dark    .v2-main,
+    .panel-dark-alt .v2-main { fill: #FFFFFF; }
+
+    .panel-dark    .v1-dot,
+    .panel-dark-alt .v1-dot { fill: #9B8CF5; }
+
+    .panel-dark    .v2-sub,
+    .panel-dark-alt .v2-sub { fill: rgba(255,255,255,0.38); }
+
+    .panel-dark    .v2-rule,
+    .panel-dark-alt .v2-rule { stroke: rgba(255,255,255,0.14); }
+
+    /* On light backgrounds: dark wordmark */
+    .panel-light   .v1-word,
+    .panel-offwhite .v1-word,
+    .panel-light   .v2-main,
+    .panel-offwhite .v2-main { fill: #09090F; }
+
+    .panel-light   .v1-dot,
+    .panel-offwhite .v1-dot { fill: #5B5BD6; }
+
+    .panel-light   .v2-sub,
+    .panel-offwhite .v2-sub { fill: rgba(9,9,15,0.40); }
+
+    .panel-light   .v2-rule,
+    .panel-offwhite .v2-rule { stroke: rgba(9,9,15,0.10); }
+
+    /* SVG sizing */
+    .panel svg {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+    }
+
+    /* ---- Sizes row ---- */
+    .sizes-section {
+      max-width: 960px;
+      margin: 0 auto 72px;
+    }
+    .sizes-row {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      background: #09090F;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px;
+      padding: 40px 48px;
+      flex-wrap: wrap;
+    }
+    .sizes-row svg { display: block; }
+
+    /* ---- Notes ---- */
+    .notes {
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .note-card {
+      background: #13141F;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-left: 3px solid #5B5BD6;
+      border-radius: 0 10px 10px 0;
+      padding: 20px 24px;
+    }
+    .note-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #7879F1;
+      margin-bottom: 8px;
+    }
+    .note-body {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.65;
+    }
+
+    @media (max-width: 640px) {
+      .panels { grid-template-columns: 1fr; }
+      .notes  { grid-template-columns: 1fr; }
+      .panel  { padding: 44px 32px; }
+      .sizes-row { flex-direction: column; align-items: flex-start; gap: 28px; padding: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-header">
+  <h1>Enso — Logo Showcase</h1>
+  <p>Two logo options · Dark &amp; light backgrounds · Inline SVG with CSS color overrides</p>
+</div>
+
+<!-- ==========================================
+     LOGO V1: MARK + WORDMARK
+     ========================================== -->
+<section class="logo-section">
+  <div class="logo-section-title">Logo V1 — Mark + Wordmark</div>
+  <div class="panels">
+
+    <!-- Dark background -->
+    <div class="panel panel-dark">
+      <span class="panel-label">Dark Background</span>
+      <div class="panel-logo">
+        <!-- INLINE SVG V1 -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 52" width="168" height="52">
+          <defs>
+            <linearGradient id="mg1a" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#5B5BD6"/>
+              <stop offset="100%" stop-color="#9B8CF5"/>
+            </linearGradient>
+          </defs>
+          <circle cx="26" cy="26" r="18" fill="none" stroke="url(#mg1a)" stroke-width="3.5" stroke-linecap="round" pathLength="360" stroke-dasharray="305 55" transform="rotate(-30 26 26)"/>
+          <circle class="v1-dot" cx="27.6" cy="8.1" r="2.2"/>
+          <text x="58" y="35" class="v1-word" font-family="'Onest', -apple-system, BlinkMacSystemFont, sans-serif" font-size="28" font-weight="650" letter-spacing="-0.6">enso</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Light background -->
+    <div class="panel panel-light">
+      <span class="panel-label">Light Background</span>
+      <div class="panel-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 52" width="168" height="52">
+          <defs>
+            <linearGradient id="mg1b" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#5B5BD6"/>
+              <stop offset="100%" stop-color="#9B8CF5"/>
+            </linearGradient>
+          </defs>
+          <circle cx="26" cy="26" r="18" fill="none" stroke="url(#mg1b)" stroke-width="3.5" stroke-linecap="round" pathLength="360" stroke-dasharray="305 55" transform="rotate(-30 26 26)"/>
+          <circle class="v1-dot" cx="27.6" cy="8.1" r="2.2"/>
+          <text x="58" y="35" class="v1-word" font-family="'Onest', -apple-system, BlinkMacSystemFont, sans-serif" font-size="28" font-weight="650" letter-spacing="-0.6">enso</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Dark alt background -->
+    <div class="panel panel-dark-alt">
+      <span class="panel-label">Dark Alt</span>
+      <div class="panel-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 52" width="168" height="52">
+          <defs>
+            <linearGradient id="mg1c" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#5B5BD6"/>
+              <stop offset="100%" stop-color="#9B8CF5"/>
+            </linearGradient>
+          </defs>
+          <circle cx="26" cy="26" r="18" fill="none" stroke="url(#mg1c)" stroke-width="3.5" stroke-linecap="round" pathLength="360" stroke-dasharray="305 55" transform="rotate(-30 26 26)"/>
+          <circle class="v1-dot" cx="27.6" cy="8.1" r="2.2"/>
+          <text x="58" y="35" class="v1-word" font-family="'Onest', -apple-system, BlinkMacSystemFont, sans-serif" font-size="28" font-weight="650" letter-spacing="-0.6">enso</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Off-white background -->
+    <div class="panel panel-offwhite">
+      <span class="panel-label">Off-white Background</span>
+      <div class="panel-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 52" width="168" height="52">
+          <defs>
+            <linearGradient id="mg1d" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#5B5BD6"/>
+              <stop offset="100%" stop-color="#9B8CF5"/>
+            </linearGradient>
+          </defs>
+          <circle cx="26" cy="26" r="18" fill="none" stroke="url(#mg1d)" stroke-width="3.5" stroke-linecap="round" pathLength="360" stroke-dasharray="305 55" transform="rotate(-30 26 26)"/>
+          <circle class="v1-dot" cx="27.6" cy="8.1" r="2.2"/>
+          <text x="58" y="35" class="v1-word" font-family="'Onest', -apple-system, BlinkMacSystemFont, sans-serif" font-size="28" font-weight="650" letter-spacing="-0.6">enso</text>
+        </svg>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==========================================
+     LOGO V2: TYPOGRAPHIC
+     ========================================== -->
+<section class="logo-section">
+  <div class="logo-section-title">Logo V2 — Typographic Wordmark</div>
+  <div class="panels">
+
+    <div class="panel panel-dark">
+      <span class="panel-label">Dark Background</span>
+      <div class="panel-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172 68" width="172" height="68">
+          <defs>
+            <linearGradient id="tg2a" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%"   stop-color="#5B5BD6"/>
+              <stop offset="100%" stop-color="#9B8CF5"/>
+            </linearGradient>
+          </defs>
+          <text x="2" y="38" class="v2-main" font-family="'Onest', -apple-system, BlinkMacSystemFont, sans-serif" font-size="38" font-weight="800" letter-spacing="-1.2">enso</text>
+          <circle cx="118" cy="28" r="5" fill="url(#tg2a)"/>
+          <line class="v2-rule" x1="2" y1="47" x2="124" y2="47" stroke-width="1"/>
+          <text x="2" y="61" class="v2-sub" font-family="'Onest', -apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="500" letter-spacing="3.2">REVENUE OPERATING SYSTEM</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="panel panel-light">
+      <span class="panel-label">Light Background</span>
+      <div class="panel-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172 68" width="172" height="68">
+          <defs>
+            <linearGradient id="tg2b" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%"   stop-color="#5B5BD6"/>
+              <stop offset="100%" stop-color="#9B8CF5"/>
+            </linearGradient>
+          </defs>
+          <text x="2" y="38" class="v2-main" font-family="'Onest', -apple-system, BlinkMacSystemFont, sans-serif" font-size="38" font-weight="800" letter-spacing="-1.2">enso</text>
+          <circle cx="118" cy="28" r="5" fill="url(#tg2b)"/>
+          <line class="v2-rule" x1="2" y1="47" x2="124" y2="47" stroke-width="1"/>
+          <text x="2" y="61" class="v2-sub" font-family="'Onest', -apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="500" letter-spacing="3.2">REVENUE OPERATING SYSTEM</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="panel panel-dark-alt">
+      <span class="panel-label">Dark Alt</span>
+      <div class="panel-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172 68" width="172" height="68">
+          <defs>
+            <linearGradient id="tg2c" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%"   stop-color="#5B5BD6"/>
+              <stop offset="100%" stop-color="#9B8CF5"/>
+            </linearGradient>
+          </defs>
+          <text x="2" y="38" class="v2-main" font-family="'Onest', -apple-system, BlinkMacSystemFont, sans-serif" font-size="38" font-weight="800" letter-spacing="-1.2">enso</text>
+          <circle cx="118" cy="28" r="5" fill="url(#tg2c)"/>
+          <line class="v2-rule" x1="2" y1="47" x2="124" y2="47" stroke-width="1"/>
+          <text x="2" y="61" class="v2-sub" font-family="'Onest', -apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="500" letter-spacing="3.2">REVENUE OPERATING SYSTEM</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="panel panel-offwhite">
+      <span class="panel-label">Off-white Background</span>
+      <div class="panel-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172 68" width="172" height="68">
+          <defs>
+            <linearGradient id="tg2d" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%"   stop-color="#5B5BD6"/>
+              <stop offset="100%" stop-color="#9B8CF5"/>
+            </linearGradient>
+          </defs>
+          <text x="2" y="38" class="v2-main" font-family="'Onest', -apple-system, BlinkMacSystemFont, sans-serif" font-size="38" font-weight="800" letter-spacing="-1.2">enso</text>
+          <circle cx="118" cy="28" r="5" fill="url(#tg2d)"/>
+          <line class="v2-rule" x1="2" y1="47" x2="124" y2="47" stroke-width="1"/>
+          <text x="2" y="61" class="v2-sub" font-family="'Onest', -apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="500" letter-spacing="3.2">REVENUE OPERATING SYSTEM</text>
+        </svg>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==========================================
+     SCALE COMPARISON
+     ========================================== -->
+<section class="sizes-section">
+  <div class="logo-section-title">Scale — V1 at different sizes</div>
+  <div class="sizes-row">
+
+    <!-- 160px -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 52" width="160" height="49">
+      <defs>
+        <linearGradient id="ms1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#5B5BD6"/>
+          <stop offset="100%" stop-color="#9B8CF5"/>
+        </linearGradient>
+      </defs>
+      <circle cx="26" cy="26" r="18" fill="none" stroke="url(#ms1)" stroke-width="3.5" stroke-linecap="round" pathLength="360" stroke-dasharray="305 55" transform="rotate(-30 26 26)"/>
+      <circle fill="#9B8CF5" cx="27.6" cy="8.1" r="2.2"/>
+      <text x="58" y="35" fill="#FFFFFF" font-family="'Onest', sans-serif" font-size="28" font-weight="650" letter-spacing="-0.6">enso</text>
+    </svg>
+
+    <!-- 120px -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 52" width="120" height="37">
+      <defs>
+        <linearGradient id="ms2" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#5B5BD6"/>
+          <stop offset="100%" stop-color="#9B8CF5"/>
+        </linearGradient>
+      </defs>
+      <circle cx="26" cy="26" r="18" fill="none" stroke="url(#ms2)" stroke-width="3.5" stroke-linecap="round" pathLength="360" stroke-dasharray="305 55" transform="rotate(-30 26 26)"/>
+      <circle fill="#9B8CF5" cx="27.6" cy="8.1" r="2.2"/>
+      <text x="58" y="35" fill="#FFFFFF" font-family="'Onest', sans-serif" font-size="28" font-weight="650" letter-spacing="-0.6">enso</text>
+    </svg>
+
+    <!-- 80px -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 52" width="80" height="25">
+      <defs>
+        <linearGradient id="ms3" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#5B5BD6"/>
+          <stop offset="100%" stop-color="#9B8CF5"/>
+        </linearGradient>
+      </defs>
+      <circle cx="26" cy="26" r="18" fill="none" stroke="url(#ms3)" stroke-width="3.5" stroke-linecap="round" pathLength="360" stroke-dasharray="305 55" transform="rotate(-30 26 26)"/>
+      <circle fill="#9B8CF5" cx="27.6" cy="8.1" r="2.2"/>
+      <text x="58" y="35" fill="#FFFFFF" font-family="'Onest', sans-serif" font-size="28" font-weight="650" letter-spacing="-0.6">enso</text>
+    </svg>
+
+    <!-- 48px (favicon size) -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 52" width="48" height="15">
+      <defs>
+        <linearGradient id="ms4" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#5B5BD6"/>
+          <stop offset="100%" stop-color="#9B8CF5"/>
+        </linearGradient>
+      </defs>
+      <circle cx="26" cy="26" r="18" fill="none" stroke="url(#ms4)" stroke-width="3.5" stroke-linecap="round" pathLength="360" stroke-dasharray="305 55" transform="rotate(-30 26 26)"/>
+      <circle fill="#9B8CF5" cx="27.6" cy="8.1" r="2.2"/>
+      <text x="58" y="35" fill="#FFFFFF" font-family="'Onest', sans-serif" font-size="28" font-weight="650" letter-spacing="-0.6">enso</text>
+    </svg>
+
+  </div>
+</section>
+
+<!-- ==========================================
+     DESIGN NOTES
+     ========================================== -->
+<section class="sizes-section">
+  <div class="logo-section-title">Design Notes</div>
+  <div class="notes">
+
+    <div class="note-card">
+      <div class="note-title">Logo V1 — Mark + Wordmark</div>
+      <div class="note-body">
+        Geometric ensō circle with a 55° gap at ~1 o'clock. Gradient stroke from #5B5BD6 → #9B8CF5 with round linecaps. A small filled terminus dot anchors the arc end — a nod to the calligraphic brushstroke origin of the ensō mark. Wordmark in Onest SemiBold at tight tracking. Primary use: nav, header, email signature.
+      </div>
+    </div>
+
+    <div class="note-card">
+      <div class="note-title">Logo V2 — Typographic Wordmark</div>
+      <div class="note-body">
+        "enso" in Onest ExtraBold (800 weight), tight letter-spacing. A small gradient circle to the right acts as a brand accent — a compressed reference to the ensō mark. Thin separator rule followed by "REVENUE OPERATING SYSTEM" in wide-tracked Onest Medium. Primary use: document headers, pitch decks, proposals.
+      </div>
+    </div>
+
+    <div class="note-card">
+      <div class="note-title">Color System</div>
+      <div class="note-body">
+        Mark gradient: #5B5BD6 → #9B8CF5 (both backgrounds). Dark bg: white wordmark (#FFFFFF). Light bg: near-black wordmark (#09090F). The mark gradient works on both — no separate color variants needed for the icon.
+      </div>
+    </div>
+
+    <div class="note-card">
+      <div class="note-title">Font: Onest Variable</div>
+      <div class="note-body">
+        All text uses Onest, loaded from the local font file at ../assets/Fonts/Onest/. Variable font with weight axis 100–900. Logo V1 uses weight 650. Logo V2 uses weight 800 (wordmark) and 500 (descriptor). Falls back to system sans-serif if font unavailable.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>

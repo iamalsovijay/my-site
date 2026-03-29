@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172 68" width="172" height="68" role="img" aria-label="Enso logotype">
+  <defs>
+
+    <linearGradient id="tg2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#5B5BD6"/>
+      <stop offset="100%" stop-color="#9B8CF5"/>
+    </linearGradient>
+
+    <style>
+      @font-face {
+        font-family: 'Onest';
+        src: url('../assets/Fonts/Onest/Onest-VariableFont_wght.ttf') format('truetype');
+        font-weight: 100 900;
+        font-display: block;
+      }
+
+      .v2-main { fill: #FFFFFF; }
+      .v2-sub  { fill: rgba(255,255,255,0.38); }
+      .v2-rule { stroke: rgba(255,255,255,0.15); }
+
+      @media (prefers-color-scheme: light) {
+        .v2-main { fill: #09090F; }
+        .v2-sub  { fill: rgba(9,9,15,0.40); }
+        .v2-rule { stroke: rgba(9,9,15,0.12); }
+      }
+    </style>
+  </defs>
+
+  <!--
+    Wordmark: "enso"
+    Onest ExtraBold (800) — maximum presence
+    Tight tracking to feel precision-built
+  -->
+  <text
+    x="2" y="38"
+    class="v2-main"
+    font-family="'Onest', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-size="38"
+    font-weight="800"
+    letter-spacing="-1.2"
+  >enso</text>
+
+  <!--
+    Brand accent: a small gradient-filled circle (ensō reference)
+    placed to the right of the wordmark — a typographic period with meaning
+    Approx x position: after "enso" at 38px 800wt ~ 104px + gap
+  -->
+  <circle cx="118" cy="28" r="5" fill="url(#tg2)"/>
+
+  <!--
+    Thin separator rule — full width of wordmark
+    Subtle, structural, very financial
+  -->
+  <line class="v2-rule" x1="2" y1="47" x2="124" y2="47" stroke-width="1"/>
+
+  <!--
+    Descriptor: REVENUE OPERATING SYSTEM
+    Onest Medium, small, wide tracking — reads like a category label
+  -->
+  <text
+    x="2" y="61"
+    class="v2-sub"
+    font-family="'Onest', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-size="8.5"
+    font-weight="500"
+    letter-spacing="3.2"
+  >REVENUE OPERATING SYSTEM</text>
+
+</svg>
