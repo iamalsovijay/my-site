@@ -2,7 +2,6 @@
   "name": "enso-site",
   "version": "1.0.0",
   "description": "Enso website with AI chat backend",
-  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js"
